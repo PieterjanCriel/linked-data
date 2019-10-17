@@ -23,4 +23,4 @@ sp:relatesTo rdfs:range lc:Course .
 
 sp:myAsset sp:relatedTo lc:somecourse .
 
-lc:somecourse lc:title "this is the titel of that course"
+lc:somecourse lc:title "this is the titel of that course" .
