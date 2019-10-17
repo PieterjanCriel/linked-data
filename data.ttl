@@ -12,7 +12,6 @@ sp:Asset rdf:type rdfs:Class .
 sp:displayName rdf:type rdf:Property .
 sp:description rdf:type rdf:Property .
 
-
 lc:title rdf:type rdf:Property .
 lc:description rdf:type rdf:Property .
 
@@ -23,3 +22,5 @@ sp:relatesTo rdfs:range lc:Course .
 
 
 sp:myAsset sp:relatedTo lc:somecourse .
+
+lc:somecourse lc:title "this is the titel of that course"
