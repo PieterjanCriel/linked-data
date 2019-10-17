@@ -1,10 +1,25 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
- @prefix dc: <http://purl.org/dc/elements/1.1/> .
- @prefix ex: <http://example.org/stuff/1.0/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+
+@prefix sp: <http://showpad.com/domains/1.0/> .
+@prefix lc: <http://learncorn.com/domain/1.0/> .
  
- <http://www.w3.org/TR/rdf-syntax-grammar>
-   dc:title "RDF/XML Syntax Specification (Revised)" ;
-   ex:editor [
-     ex:fullname "Dave Beckett";
-     ex:homePage <http://purl.org/net/dajobe/>
-   ] .
+lc:Course rdf:type rdfs:Class .
+sp:Asset rdf:type rdfs:Class .
+
+sp:displayName rdf:type rdf:Property .
+sp:description rdf:type rdf:Property .
+
+
+lc:title rdf:type rdf:Property .
+lc:description rdf:type rdf:Property .
+
+sp:relatesTo rdf:type rdf:Property .
+
+sp:relatesTo rdfs:domain sp:Asset .
+sp:relatesTo rdfs:range lc:Course .
+
+
+sp:myAsset sp:relatedTo lc:somecourse .
